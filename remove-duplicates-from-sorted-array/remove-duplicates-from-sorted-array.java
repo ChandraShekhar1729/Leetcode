@@ -19,22 +19,31 @@ class Solution {
 
         // }
         // return i+1;
-                ArrayList<Integer> list= new ArrayList<>();
-        list.add(A[0]);
-        for( int i=1;i<A.length;i++){
+        //         ArrayList<Integer> list= new ArrayList<>();
+        // list.add(A[0]);
+        // for( int i=1;i<A.length;i++){
+        //     if(A[i]!=A[i-1]){
+        //         list.add(A[i]);
+        //     }
+            
+        // }
+        // int x=list.size();
+        //  int z=0;
+        // for(int k:list){
+        //     A[z]=k;
+        //     z++;
+        // }
+        
+        // return x;
+          int k=1;
+        for(int i=1;i<A.length;i++){
             if(A[i]!=A[i-1]){
-                list.add(A[i]);
+                A[k]=A[i];
+                k++;
             }
             
         }
-        int x=list.size();
-         int z=0;
-        for(int k:list){
-            A[z]=k;
-            z++;
-        }
-        
-        return x;
+        return k;
         
     }
 }
