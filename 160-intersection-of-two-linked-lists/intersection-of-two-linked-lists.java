@@ -12,37 +12,33 @@
  import java.util.HashMap;
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        if(headA.next==null&&headB.next==null&&headA==headB){
-            return headA;
-        }
+        HashSet<ListNode> set= new HashSet<ListNode>();
 
-            
-        ListNode temp= headA;
-
-        while(temp!=null){
-
-        ListNode dummy=temp;
-
-         ListNode temp1=headB;
+		ListNode temp=headA;
 
 
-         while(temp1!=null){
+		while(temp!=null){
 
-           if(temp1==dummy){
-               return temp1;
-           }
+         set.add(temp);
+		 temp=temp.next;
+	     }
 
-           temp1=temp1.next;
+       ListNode dummy=headB;
+
+		 while(dummy!=null){
+			 if(set.contains(dummy)){
+				 return dummy;
+			 }
+
+			 dummy=dummy.next;
+		 }
 
 
+       
 
-  }
 
-temp=temp.next;
+return null;
 
- }
-
- return null;
         
     }
 }
