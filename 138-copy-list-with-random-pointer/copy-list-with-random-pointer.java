@@ -34,8 +34,8 @@ class Solution {
         while(t!=null){
 
            Node node=map.get(t);
-          node.next = (t.next != null) ? map.get(t.next):null;
-        node.random = (t.random != null) ? map.get(t.random):null;
+          node.next = map.get(t.next);
+        node.random =  map.get(t.random);
 
 
            t=t.next;
