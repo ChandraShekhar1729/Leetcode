@@ -1,12 +1,6 @@
 class Solution {
     public int divide(int dividend, int divisor) {
 
-    // Handle overflow cases
-        if (dividend == Integer.MIN_VALUE && divisor == -1) {
-            return Integer.MAX_VALUE;
-        }
-
-        // Determine the sign of the result
         boolean negative = (dividend < 0) ^ (divisor < 0);
 
         // Take the absolute values of dividend and divisor
@@ -41,7 +35,7 @@ class Solution {
             return Integer.MAX_VALUE;
         } else {
             return (int) quotient;
-        }    
+        }   
 
 
   
