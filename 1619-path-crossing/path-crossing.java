@@ -22,8 +22,10 @@ public class Solution {
             if (set.contains(key)) {
                 return true;
             }
-
+               else{
             set.add(key);
+
+               }
         }
 
         return false;
